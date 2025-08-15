@@ -44,3 +44,30 @@ contactForm.addEventListener('submit', function(e){
     });
 });
 
+
+const watchTrailerBtn = document.getElementById('watchTrailerBtn');
+  const trailerModal = document.getElementById('trailerModal');
+  const closeTrailer = document.getElementById('closeTrailer');
+  const trailerVideo = trailerModal.querySelector('video');
+
+
+  watchTrailerBtn.addEventListener('click', () => {
+    trailerModal.style.display = 'flex';
+    trailerVideo.currentTime = 0;
+    trailerVideo.play();
+  });
+
+
+  function closeTrailerModal() {
+    trailerModal.style.display = 'none';
+    trailerVideo.pause();
+    trailerVideo.currentTime = 0;
+  }
+
+  closeTrailer.addEventListener('click', closeTrailerModal);
+
+  trailerModal.addEventListener('click', (event) => {
+    if (event.target === trailerModal) {
+      closeTrailerModal();
+    }
+  });
