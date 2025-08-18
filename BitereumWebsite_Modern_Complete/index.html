@@ -5,21 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bitereum - Next-Gen Cryptocurrency</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
   <header>
     <nav>
-      <a href="#hero"><div class="logo"><img src = "assets/img/Bitereum.png" alt="Bitereum Logo" width="150px"></div></a>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#tokenomics">Tokenomics</a></li>
-        <li><a href="assets/pdf/BitereumWhitepaper.pdf" target="_blank">Whitepaper</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <a href="#hero"><div class="logo"><img src="assets/img/Bitereum.png" alt="Bitereum Logo" width="150px"></div></a>
+
+  <ul id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#tokenomics">Tokenomics</a></li>
+    <li><a href="assets/pdf/BitereumWhitepaper.pdf" target="_blank">Whitepaper</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <!-- HAMBURGER BUTTON -->
+    <div id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+</nav>
+
   </header>
 
   <div id="hero">
@@ -34,14 +40,14 @@
     
     <div class="button-group">
       <a href="assets/pdf/BitereumWhitepaper.pdf" target="_blank" class="btn">Download Whitepaper</a>
-      <button id="watchTrailerBtn" class="btn">Watch Trailer</button>
+      <button id="trailerBtn" class="btn">Watch Trailer</button>
     </div>
     
     <div id="trailerModal">
       <div class="trailer-content">
         <button id="closeTrailer" >Close</button>
-        <video width="100%" controls autoplay poster="assets/img/trailer_poster.png" style="border-radius:12px; box-shadow:0 4px 24px #00f6ff44;">
-          <source src="assets/vid/Trailer.mp4" type="video/mp4">
+        <video id="trailerVideo" width="100%" controls autoplay poster="assets/img/trailer_poster.png" style="border-radius:12px; box-shadow:0 4px 24px #00f6ff44;">
+        <source src="assets/vid/Trailer.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -99,17 +105,8 @@
   <footer>
     <p>&copy; 2025 Bitereum. All rights reserved.</p>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="script.js"></script>
-  <script>
-    // Show trailer modal
-    document.getElementById('watchTrailerBtn').onclick = function() {
-      document.getElementById('trailerModal').style.display = 'flex';
-    };
-    // Close trailer modal
-    document.getElementById('closeTrailer').onclick = function() {
-      document.getElementById('trailerModal').style.display = 'none';
-    };
-  </script>
 </body>
 </html>
