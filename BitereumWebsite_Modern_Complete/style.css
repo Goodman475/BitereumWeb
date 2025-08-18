@@ -6,6 +6,27 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* Prevent horizontal scroll */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make sure hero video never overflows */
+.hero-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 body {
   background: #0f0f1a;
   color: #fff;
